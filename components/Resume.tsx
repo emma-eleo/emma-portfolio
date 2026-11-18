@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { RESUME_SRC } from "@/lib/assets";
 
-/** Inline PDF viewer + download. Shows a quiet placeholder until the file exists at RESUME_SRC. */
+/** Large inline PDF viewer (page shown whole, US-Letter ratio) + download. Shows a placeholder only if the file is missing. */
 export default function Resume() {
   const [state, setState] = useState<"checking" | "ready" | "missing">("checking");
 
@@ -18,15 +18,18 @@ export default function Resume() {
     <div className="resume">
       <div className="resume-bar">
         {state === "ready" ? (
-          <a className="resume-btn" href={RESUME_SRC} download>Download PDF</a>
+          <>
+            <a className="resume-btn" href={RESUME_SRC} target="_blank" rel="noopener noreferrer">Open full size ↗</a>
+            <a className="resume-btn" href={RESUME_SRC} download="Emma-Resume.pdf">Download PDF</a>
+          </>
         ) : (
           <span className="resume-btn is-disabled" aria-disabled="true">Download PDF</span>
         )}
       </div>
       <div className="resume-frame">
         {state === "ready" ? (
-          <object data={`${RESUME_SRC}#view=FitH`} type="application/pdf" className="resume-object" aria-label="Resume (PDF)">
-            <p className="resume-note">Your browser can&apos;t show PDFs inline. <a href={RESUME_SRC}>Open the resume</a>.</p>
+          <object data={`${RESUME_SRC}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`} type="application/pdf" className="resume-object" aria-label="Resume (PDF)">
+            <p className="resume-note">Your browser can&apos;t show PDFs inline. <a href={RESUME_SRC} target="_blank" rel="noopener noreferrer">Open the resume</a> or use Download PDF.</p>
           </object>
         ) : (
           <p className="resume-note">{state === "checking" ? "" : "Resume coming soon."}</p>

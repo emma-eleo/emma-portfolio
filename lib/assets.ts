@@ -4,7 +4,9 @@ export const ASSETS = {
     table: "/assets/workspace/table.png",
     cinnamon: "/assets/workspace/cinnamon.png",
     coffee: "/assets/workspace/coffee.png",
-    notebook: "/assets/workspace/Group 1.png",
+    notebook: "/assets/workspace/Group 1.png", // legacy single-image notebook (no longer used on the table)
+    diary: "/assets/workspace/firefly.png", // leather diary, used on the table
+    polaroid: "/assets/workspace/polaroid.png", // photo laid on top of the diary
     player: "/assets/workspace/player.png",
   },
 } as const;
