@@ -1,5 +1,5 @@
 "use client";
-import { useState, type FormEvent, type ReactNode } from "react";
+import { useEffect, useState, type FormEvent, type ReactNode } from "react";
 import { CONTACT } from "@/data/contact";
 import Folder, { type FolderTab } from "./Folder";
 
@@ -24,8 +24,15 @@ const MailLogo = () => (
     <path d="m3.5 7 8.5 6 8.5-6" />
   </svg>
 );
+const CopyLogo = () => (
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <rect x="8" y="8" width="13" height="13" rx="2" />
+    <path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3" />
+  </svg>
+);
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+const GMAIL_COMPOSE_URL = `https://mail.google.com/mail/?view=cm&fs=1&to=${CONTACT.email}`;
 type Errors = Partial<Record<"name" | "email" | "message", string>>;
 
 function validate(v: { name: string; email: string; message: string }): Errors {
@@ -49,15 +56,21 @@ function SocialLink({ href, icon, label, external = true }: { href: string; icon
 export default function Contact({ onBack }: { onBack: () => void }) {
   const [values, setValues] = useState({ name: "", email: "", message: "" });
   const [errors, setErrors] = useState<Errors>({});
-  const [sent, setSent] = useState(false);
+  const [composeRequested, setComposeRequested] = useState(false);
+  const [copyStatus, setCopyStatus] = useState<"idle" | "copied" | "error">("idle");
+
+  useEffect(() => {
+    if (copyStatus === "idle") return;
+    const timeout = window.setTimeout(() => setCopyStatus("idle"), 2500);
+    return () => window.clearTimeout(timeout);
+  }, [copyStatus]);
 
   const set = (k: keyof typeof values) => (e: { target: { value: string } }) => {
     setValues((v) => ({ ...v, [k]: e.target.value }));
     if (errors[k]) setErrors((x) => ({ ...x, [k]: undefined }));
-    setSent(false);
+    setComposeRequested(false);
   };
 
-  // No server: validate, then hand the message to the visitor's own email app (mailto) — nothing is faked.
   const submit = (e: FormEvent) => {
     e.preventDefault();
     const found = validate(values);
@@ -65,8 +78,20 @@ export default function Contact({ onBack }: { onBack: () => void }) {
     if (Object.keys(found).length) return;
     const subject = `Portfolio message from ${values.name.trim()}`;
     const body = `${values.message.trim()}\n\n— ${values.name.trim()}\n${values.email.trim()}`;
-    window.location.href = `mailto:${CONTACT.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    setSent(true);
+    const composeUrl = new URL(GMAIL_COMPOSE_URL);
+    composeUrl.searchParams.set("su", subject);
+    composeUrl.searchParams.set("body", body);
+    window.open(composeUrl.toString(), "_blank", "noopener,noreferrer");
+    setComposeRequested(true);
+  };
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(CONTACT.email);
+      setCopyStatus("copied");
+    } catch {
+      setCopyStatus("error");
+    }
   };
 
   return (
@@ -78,7 +103,22 @@ export default function Contact({ onBack }: { onBack: () => void }) {
             Whether it’s a project, a collaboration, or simply a hello, I’d love to hear from you. Write a note here, or reach me through any of the links below.
           </p>
           <div className="contact-links">
-            <SocialLink href={`mailto:${CONTACT.email}`} icon={<MailLogo />} label={CONTACT.email} external={false} />
+            <SocialLink href={GMAIL_COMPOSE_URL} icon={<MailLogo />} label={CONTACT.email} />
+            <SocialLink href={`mailto:${CONTACT.email}`} icon={<MailLogo />} label="Open in default email app" external={false} />
+            <button
+              type="button"
+              className="contact-link"
+              style={{ border: 0, background: "transparent", fontFamily: "inherit", cursor: "pointer", textAlign: "left" }}
+              onClick={copyEmail}
+            >
+              <span className="contact-link-icon"><CopyLogo /></span>
+              <span>Copy email address</span>
+            </button>
+            {copyStatus !== "idle" && (
+              <p className="contact-note" role="status">
+                {copyStatus === "copied" ? "Email copied!" : "Couldn’t copy email. Please use the email link instead."}
+              </p>
+            )}
             {CONTACT.instagram.url && <SocialLink href={CONTACT.instagram.url} icon={<InstagramLogo />} label={CONTACT.instagram.label || "Instagram"} />}
             <SocialLink href={CONTACT.github.url} icon={<GithubLogo />} label={CONTACT.github.label} />
           </div>
@@ -103,10 +143,10 @@ export default function Contact({ onBack }: { onBack: () => void }) {
           <div className="contact-actions">
             <button type="submit" className="proj-btn">Send Message</button>
           </div>
-          {sent && (
+          {composeRequested && (
             <p className="contact-note" role="status">
-              Your email app should now open with the message ready to send. If it doesn’t, write to me directly at{" "}
-              <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>.
+              Gmail compose should open in a new tab with your message ready to send. If it doesn’t, email me at{" "}
+              <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a> or use the default email app link.
             </p>
           )}
         </form>
