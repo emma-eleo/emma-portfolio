@@ -9,7 +9,7 @@ export interface Project {
   /** shown as one quiet line, joined with " · " */
   technologies?: string[];
   /** the single action button; always opens in a new tab */
-  action: { label: string; href: string };
+  action: { type: "demo" | "github"; label: string; href: string };
 }
 
 export const PROJECTS: Project[] = [
@@ -21,7 +21,7 @@ export const PROJECTS: Project[] = [
     description:
       "An online math-learning platform designed to make exam preparation more accessible and efficient by bringing Mongolian university entrance exam (EYES) and SAT Math resources together.",
     technologies: ["HTML", "CSS", "JavaScript", "LaTeX"],
-    action: { label: "View Demo", href: "https://alphamath-v1.vercel.app/" },
+    action: { type: "demo", label: "View Demo", href: "https://alphamath-v1.vercel.app/" },
   },
   {
     id: "noux",
@@ -31,7 +31,7 @@ export const PROJECTS: Project[] = [
     description:
       "An experimental fashion website showcasing original clothing designs by my teammate, with the vision of evolving into an online shop.",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
-    action: { label: "View Demo", href: "https://noax-beryl.vercel.app/" },
+    action: { type: "demo", label: "View Demo", href: "https://noax-beryl.vercel.app/" },
   },
   {
     id: "roan",
@@ -41,7 +41,7 @@ export const PROJECTS: Project[] = [
     description:
       "A concept website for a fictional Korean fine-dining restaurant inspired by the intersection of Mongolian heritage and contemporary Korean cuisine.",
     technologies: ["React", "JavaScript", "Tailwind CSS", "GSAP", "Framer Motion", "Vercel"],
-    action: { label: "View Demo", href: "https://roa-nv3.vercel.app/" },
+    action: { type: "demo", label: "View Demo", href: "https://roa-nv3.vercel.app/" },
   },
   {
     id: "sat-seat-tracker",
@@ -50,6 +50,6 @@ export const PROJECTS: Project[] = [
     description:
       "A Python automation tool that monitors SAT test-center availability and sends near-real-time Telegram or Discord alerts when seats open.",
     technologies: ["Python", "Playwright", "Telegram Bot API", "Discord webhooks", "PyYAML", "python-dotenv"],
-    action: { label: "View GitHub", href: "https://github.com/emma-eleo/sat-seat-tracker" },
+    action: { type: "github", label: "View GitHub", href: "https://github.com/emma-eleo/sat-seat-tracker" },
   },
 ];
