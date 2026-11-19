@@ -405,8 +405,7 @@
 :root {
   --bg: #1c0909;
   --ink: #f1e8d6;
-  --font-script: "Carattere", cursive;
-  --font-fancy: "Dawning of a New Day", cursive;
+  --font-script: "Carattere", "Dawning of a New Day", cursive;
   --font-serif: "Gentium Book Basic", "Gentium Basic", Georgia, serif;
   --font-display: "Carattere", cursive;
   --font-hand: "Caveat", cursive;
@@ -685,7 +684,7 @@ body {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  min-height: calc(290 * var(--u));
+  min-height: calc(285 * var(--u));
   border: 1px solid #4d4141;
   border-radius: calc(16 * var(--u));
   padding: calc(22 * var(--u)) calc(22 * var(--u)) calc(20 * var(--u));
@@ -863,7 +862,7 @@ a.resume-btn:hover, a.resume-btn:focus-visible {
 }
 .about-text {
   position: absolute;
-  font-family: "Caveat", cursive;
+  font-family: "Dawning of a New Day", "Caveat", cursive;
   color: #3a2f2a;
   font-size: calc(23 * var(--u));
   line-height: calc(28.45 * var(--u));
@@ -894,7 +893,7 @@ a.resume-btn:hover, a.resume-btn:focus-visible {
     bottom: max(18px, env(safe-area-inset-bottom));
     justify-content: center;
     color: rgba(241,232,214,.7);
-    font: 400 20px var(--font-hand);
+    font: 400 20px var(--font-script);
   }
   .about-turn button {
     width: 48px;
@@ -1048,6 +1047,37 @@ a.resume-btn:hover, a.resume-btn:focus-visible {
   }
   .contact-note {
     font-size: 15px;
+  }
+}
+.spotify-tray {
+  position: fixed;
+  z-index: 30;
+  left: max(16px, calc(30 * var(--u)));
+  bottom: max(16px, calc(40 * var(--u)));
+  width: min(352px, calc(100vw - 32px));
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity .6s ease, transform .6s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.spotify-tray.is-open {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+.spotify-tray iframe {
+  display: block;
+  border: 0;
+  width: 100%;
+  color-scheme: normal;
+}
+@media (max-width: 900px), (max-aspect-ratio: 1/1) {
+  .spotify-tray {
+    left: 50%;
+    margin-left: calc(min(352px, 100vw - 32px) / -2);
+    bottom: 64px;
   }
 }
 @property --tw-rotate-x {

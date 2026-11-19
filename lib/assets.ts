@@ -11,18 +11,9 @@ export const ASSETS = {
   },
 } as const;
 
-/**
- * MUSIC PLAYER AUDIO SOURCE
- * Drop an audio file you own the rights to into /public/assets/audio/ and set the path here,
- * e.g. "/assets/audio/my-song.mp3". Leave as "" until then (no music is selected for you).
- */
-export const AUDIO_SRC = "";
 
-/**
- * RESUME PDF
- * Put your final resume at /public/assets/resume/Emma-Resume.pdf (or change the path here).
- * Until the file exists, the Resume tab shows "Resume coming soon" and the download button is disabled.
- */
+export const SPOTIFY_TRACK_URL = "https://open.spotify.com/track/2wo8xxzFHcB7WorvcIBkfD?si=14f805ac1ac0477e";
+
 export const RESUME_SRC = "/assets/resume/Emma-Resume.pdf";
 
 export const ABOUT_ASSETS = {
