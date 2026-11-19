@@ -1,11 +1,11 @@
 import type { ShadowSpec } from "./units";
 
 /**
- * One light for the whole table: in front of, to the left of, and above the scene.
- * Seen from above, that throws shadows away from the viewer (up the screen) and to the right.
+ * One light for the whole table: from the north-west (top-left of the screen), above the scene.
+ * Every cast shadow therefore extends south-east (down and to the right).
  * Change LIGHT to move the light — every object follows.
  */
-export const LIGHT = { x: 0.45, y: -0.89 }; // unit-ish direction a shadow travels, in screen space (+x right, +y down)
+export const LIGHT = { x: 0.7, y: 0.7 }; // direction a shadow travels on screen (+x right, +y down) → south-east
 
 /**
  * Two-part shadow for something resting on the table, `height` design-px thick:

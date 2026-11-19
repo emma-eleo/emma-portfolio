@@ -2,7 +2,7 @@ import { ASSETS } from "@/lib/assets";
 import type { ShadowSpec } from "@/lib/units";
 import { grounded } from "@/lib/lighting";
 
-export type SectionId = "hobbies" | "projects" | "about";
+export type SectionId = "hobbies" | "projects" | "about" | "contact";
 export type Shadow = ShadowSpec;
 
 /** One image placed on the table. */

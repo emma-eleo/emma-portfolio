@@ -16,11 +16,13 @@ interface Props<T extends string> {
   onBack: () => void;
   /** Changing this key cross-fades the content and scrolls back to the top. */
   contentKey: string;
+  /** "dark" = the deeper brown used by My Projects and Contact */
+  variant?: "default" | "dark";
   children: ReactNode;
 }
 
 /** The dark brown folder with tabs, shared by My Hobbies and My Projects. */
-export default function Folder<T extends string>({ label, tabs, active, onChange, onBack, contentKey, children }: Props<T>) {
+export default function Folder<T extends string>({ label, tabs, active, onChange, onBack, contentKey, variant = "default", children }: Props<T>) {
   const body = useRef<HTMLDivElement>(null);
   const refs = useRef<(HTMLButtonElement | null)[]>([]);
 
@@ -33,7 +35,7 @@ export default function Folder<T extends string>({ label, tabs, active, onChange
   };
 
   return (
-    <main className="hob-root">
+    <main className={`hob-root${variant === "dark" ? " folder--dark" : ""}`}>
       <SiteTitle />
       <BackButton onClick={onBack} />
 

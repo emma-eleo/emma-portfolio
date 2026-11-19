@@ -49,6 +49,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (\"73feaa738c14\");\nif (false) {}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHJzYykvLi9ub2RlX21vZHVsZXMvQGZvbnRzb3VyY2UvZ2VudGl1bS1ib29rLWJhc2ljL2xhdGluLTQwMC5jc3MiLCJtYXBwaW5ncyI6Ijs7OztBQUFBLGlFQUFlLGNBQWM7QUFDN0IsSUFBSSxLQUFVLEVBQUUsRUFBdUIiLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcRW1tYVxcRG9jdW1lbnRzXFxlbW1hLXBvcnRmb2xpb1xcbm9kZV9tb2R1bGVzXFxAZm9udHNvdXJjZVxcZ2VudGl1bS1ib29rLWJhc2ljXFxsYXRpbi00MDAuY3NzIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBkZWZhdWx0IFwiNzNmZWFhNzM4YzE0XCJcbmlmIChtb2R1bGUuaG90KSB7IG1vZHVsZS5ob3QuYWNjZXB0KCkgfVxuIl0sIm5hbWVzIjpbXSwiaWdub3JlTGlzdCI6WzBdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(rsc)/./node_modules/@fontsource/gentium-book-basic/latin-400.css\n");
 
+/***/ }),
+
+/***/ "(rsc)/./node_modules/@fontsource/gentium-book-basic/latin-700.css":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@fontsource/gentium-book-basic/latin-700.css ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (\"54caee7085f5\");\nif (false) {}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHJzYykvLi9ub2RlX21vZHVsZXMvQGZvbnRzb3VyY2UvZ2VudGl1bS1ib29rLWJhc2ljL2xhdGluLTcwMC5jc3MiLCJtYXBwaW5ncyI6Ijs7OztBQUFBLGlFQUFlLGNBQWM7QUFDN0IsSUFBSSxLQUFVLEVBQUUsRUFBdUIiLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcRW1tYVxcRG9jdW1lbnRzXFxlbW1hLXBvcnRmb2xpb1xcbm9kZV9tb2R1bGVzXFxAZm9udHNvdXJjZVxcZ2VudGl1bS1ib29rLWJhc2ljXFxsYXRpbi03MDAuY3NzIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBkZWZhdWx0IFwiNTRjYWVlNzA4NWY1XCJcbmlmIChtb2R1bGUuaG90KSB7IG1vZHVsZS5ob3QuYWNjZXB0KCkgfVxuIl0sIm5hbWVzIjpbXSwiaWdub3JlTGlzdCI6WzBdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(rsc)/./node_modules/@fontsource/gentium-book-basic/latin-700.css\n");
+
 /***/ })
 
 };
