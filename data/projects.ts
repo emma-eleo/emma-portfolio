@@ -27,7 +27,7 @@ export const PROJECTS: Project[] = [
     id: "noux",
     name: "N.O.U.X",
     category: "Clothing Brand Website",
-    period: "Summer 2026",
+    period: "Jun-Aug 2026",
     description:
       "An experimental fashion website showcasing original clothing designs by my teammate, with the vision of evolving into an online shop.",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
@@ -37,18 +37,18 @@ export const PROJECTS: Project[] = [
     id: "roan",
     name: "ROAN",
     category: "Restaurant Website (Agency Project)",
-    period: "Summer 2026",
+    period: "May-Jul 2026",
     description:
       "A concept website for a fictional Korean fine-dining restaurant inspired by the intersection of Mongolian heritage and contemporary Korean cuisine.",
     technologies: ["React", "JavaScript", "Tailwind CSS", "GSAP", "Framer Motion", "Vercel"],
     action: { type: "demo", label: "View Demo", href: "https://roa-nv3.vercel.app/" },
   },
   {
-    // No live demo — GitHub only. Add category / period / technologies here when you have them.
     id: "sat-seat-tracker",
     name: "SAT Seat Tracker",
+    period: "Oct-Nov 2026",
     description:
       "A Python-based automation tool that monitors SAT test-center availability and sends real-time Telegram alerts when seats open.",
-    action: { type: "github", label: "View GitHub", href: "https://github.com/emma-eleo/sat-seat-tracker" },
+    action: { label: "View GitHub", href: "https://github.com/emma-eleo/sat-seat-tracker" },
   },
 ];

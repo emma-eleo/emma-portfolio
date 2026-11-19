@@ -1,9 +1,8 @@
 /** The handwritten introduction. Each string is one paragraph; `left` is the left page, `right` the right page. */
 export const ABOUT_TEXT = {
-  left: ["Hey, I'm Emma!", "I'm a curious mind and an enthusiastic maker. I love building things, from AI-powered applications and software experiments to little creative projects."],
+  left: ["Hey, I'm Emma!", "I'm a curious builder with a soft spot for technology, creativity, and turning ideas into something tangible."],
   right: [
-    "I'm fascinated by how technology, engineering, and design intersect, and I'm always eager to learn something new.",
-    "When I'm not coding, I'm probably painting, baking, or finding another excuse to make something with my hands.",
+    "Beyond the screen, you'll probably find me painting, baking, or exploring a new creative hobby.",
   ],
 };
 

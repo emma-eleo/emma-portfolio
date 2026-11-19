@@ -13,11 +13,11 @@ export const FOOD_CATEGORIES: FoodCategory[] = [
     id: "desserts", title: "Desserts",
     items: [
       f("applepie.jpg", "Apple crumble pie"), f("tresleches.png", "Tres Leches"), f("carrotcake.jpg", "Carrot cake"),
-      f("tiramisu.jpg", "Tiramisu"), f("birthday cake.png", "Birthday cake"), f("cookies.jpg", "Cookies"), f("muffins.png", "Muffins"),
+      f("tiramisu.jpg", "Tiramisu"), f("birthday cake.png", "Birthday cake"), f("cookies.jpg", "Choco chip Cookies"), f("muffins.png", "BlueberryMuffins"),
     ],
   },
   {
     id: "meals", title: "Meals",
-    items: [f("chicken.png", "Chicken"), f("khuushuur.jpg", "Khuushuur"), f("meal.jpg", "Meal"), f("salad.jpg", "Salad"), f("shul.png", "Shul")],
+    items: [f("chicken.png", "Butter Chicken with Naan"), f("khuushuur.jpg", "Khuushuur"), f("meal.jpg", "Fried Chicken with Fries"), f("salad.jpg", "Salad"), f("shul.png", "Vegetable Soup"), f("steak.jpg", "Steak"), f("sushi.jpg", "Sushi")],
   },
 ];

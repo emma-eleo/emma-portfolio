@@ -41,13 +41,13 @@ export const TABLE = {
 const DIARY: ObjectLayer = {
   src: ASSETS.workspace.diary, source: { w: 843, h: 1264 }, bbox: [108, 207, 759, 1001],
   center: [803.9, 583.4], scale: 0.526, rotate: 17.3,
-  shadow: grounded(24), // diary is ~24px thick
+  shadow: grounded(22), // diary is ~24px thick
 };
 
 const POLAROID: ObjectLayer = {
   src: ASSETS.workspace.polaroid, source: { w: 1125, h: 2000 }, bbox: [55, 235, 1079, 1852],
   center: [840.2, 710.6], scale: 0.0962, rotate: 17.3,
-  shadow: grounded(5), // photo lying on the diary cover
+  shadow: grounded(4), // photo lying on the diary cover
 };
 
 export const WORKSPACE_OBJECTS: WorkspaceObjectData[] = [
