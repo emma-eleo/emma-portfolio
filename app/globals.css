@@ -157,7 +157,7 @@ a.resume-btn:hover, a.resume-btn:focus-visible { background: #3f2f2f; border-col
   margin-left: calc(-1 * var(--cx) * var(--u)); margin-top: calc(-1 * var(--cy) * var(--u));
   transition: transform .7s cubic-bezier(.4, 0, .2, 1);
 }
-.about-text { position: absolute; font-family: "Dawning of a New Day", "Caveat", cursive; color: #3a2f2a; font-size: calc(23 * var(--u)); line-height: calc(28.45 * var(--u)); }
+.about-text { position: absolute; font-family: "Caveat", cursive; color: #3a2f2a; font-size: calc(23 * var(--u)); line-height: calc(28.45 * var(--u)); }
 .about-text p { margin: 0; }
 .about-turn { display: none; }
 @media (max-width: 900px), (max-aspect-ratio: 1/1) {
@@ -165,7 +165,7 @@ a.resume-btn:hover, a.resume-btn:focus-visible { background: #3f2f2f; border-col
   .about-root { --u: min(calc(94vw / 500), calc(86dvh / 740)); }
   .about-root[data-page="0"] .about-frame { transform: translateX(calc(232 * var(--u))); }
   .about-root[data-page="1"] .about-frame { transform: translateX(calc(-232 * var(--u))); }
-  .about-turn { display: flex; align-items: center; gap: 22px; position: absolute; left: 0; right: 0; bottom: max(18px, env(safe-area-inset-bottom)); justify-content: center; color: rgba(241,232,214,.7); font: 400 20px var(--font-script); }
+  .about-turn { display: flex; align-items: center; gap: 22px; position: absolute; left: 0; right: 0; bottom: max(18px, env(safe-area-inset-bottom)); justify-content: center; color: rgba(241,232,214,.7); font: 400 20px var(--font-hand); }
   .about-turn button { width: 48px; height: 48px; border-radius: 999px; border: 1px solid #5a4343; background: transparent; color: #e2d8cf; font-size: 26px; line-height: 1; cursor: pointer; }
   .about-turn button:disabled { opacity: .3; cursor: default; }
 }
