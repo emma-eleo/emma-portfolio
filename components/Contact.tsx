@@ -104,7 +104,6 @@ export default function Contact({ onBack }: { onBack: () => void }) {
           </p>
           <div className="contact-links">
             <SocialLink href={GMAIL_COMPOSE_URL} icon={<MailLogo />} label={CONTACT.email} />
-            <SocialLink href={`mailto:${CONTACT.email}`} icon={<MailLogo />} label="Open in default email app" external={false} />
             <button
               type="button"
               className="contact-link"

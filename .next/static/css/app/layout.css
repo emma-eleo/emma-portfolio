@@ -332,6 +332,10 @@
   .rounded-sm {
     border-radius: var(--radius-sm);
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .bg-transparent {
     background-color: transparent;
   }
@@ -862,7 +866,7 @@ a.resume-btn:hover, a.resume-btn:focus-visible {
 }
 .about-text {
   position: absolute;
-  font-family: "Dawning of a New Day", "Caveat", cursive;
+  font-family: "Caveat", cursive;
   color: #3a2f2a;
   font-size: calc(23 * var(--u));
   line-height: calc(28.45 * var(--u));
@@ -893,7 +897,7 @@ a.resume-btn:hover, a.resume-btn:focus-visible {
     bottom: max(18px, env(safe-area-inset-bottom));
     justify-content: center;
     color: rgba(241,232,214,.7);
-    font: 400 20px var(--font-script);
+    font: 400 20px var(--font-hand);
   }
   .about-turn button {
     width: 48px;
@@ -1100,6 +1104,11 @@ a.resume-btn:hover, a.resume-btn:focus-visible {
   syntax: "*";
   inherits: false;
 }
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-leading {
   syntax: "*";
   inherits: false;
@@ -1230,6 +1239,7 @@ a.resume-btn:hover, a.resume-btn:focus-visible {
       --tw-rotate-z: initial;
       --tw-skew-x: initial;
       --tw-skew-y: initial;
+      --tw-border-style: solid;
       --tw-leading: initial;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
