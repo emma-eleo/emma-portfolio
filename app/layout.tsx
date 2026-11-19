@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "@fontsource/dawning-of-a-new-day";
 import "@fontsource/gentium-book-basic/latin-400.css";
+import "@fontsource/gentium-book-basic/latin-700.css";
 import "@fontsource/carattere";
 import "@fontsource/caveat";
 import "./globals.css";

@@ -7,9 +7,6 @@ import WorkspaceObject from "./WorkspaceObject";
 import MusicPlayer from "./MusicPlayer";
 import { SiteTitle } from "./Navigation";
 
-/** Placeholder: replace with the real address when you're ready. */
-const CONTACT_HREF = "mailto:";
-
 export default function Workspace({ onNavigate }: { onNavigate: (s: SectionId) => void }) {
   const corner = { fontFamily: "var(--font-script)", color: "rgba(241,232,214,.8)" } as const;
   return (
@@ -44,13 +41,14 @@ export default function Workspace({ onNavigate }: { onNavigate: (s: SectionId) =
 
       {/* Corner details sit on the viewport corners, sized from the same unit. */}
       <SiteTitle />
-      <a
-        href={CONTACT_HREF}
-        className="absolute underline underline-offset-4 decoration-1 outline-none transition-colors hover:text-[#fff8e8] focus-visible:text-[#fff8e8]"
+      <button
+        type="button"
+        onClick={() => onNavigate("contact")}
+        className="absolute cursor-pointer bg-transparent p-0 underline underline-offset-4 decoration-1 outline-none transition-colors hover:text-[#fff8e8] focus-visible:text-[#fff8e8]"
         style={{ ...corner, right: `max(16px, ${u(65)})`, bottom: `max(14px, ${u(55)})`, fontSize: `max(17px, ${u(33)})` }}
       >
         Contact me
-      </a>
+      </button>
     </main>
   );
 }
