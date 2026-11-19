@@ -18,6 +18,6 @@ export const FOOD_CATEGORIES: FoodCategory[] = [
   },
   {
     id: "meals", title: "Meals",
-    items: [f("chicken.png", "Butter Chicken with Naan"), f("khuushuur.jpg", "Khuushuur"), f("meal.jpg", "Fried Chicken with Fries"), f("salad.jpg", "Salad"), f("shul.png", "Vegetable Soup"), f("steak.jpg", "Steak"), f("sushi.jpg", "Sushi")],
+    items: [f("chicken.png", "Butter Chicken with Naan"), f("khuushuur.jpg", "Khuushuur"), f("meal.jpg", "Fried Chicken with Fries"), f("salad.jpg", "Salad"), f("shul.png", "Vegetable Soup")],
   },
 ];

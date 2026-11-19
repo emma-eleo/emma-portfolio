@@ -7,7 +7,7 @@ import Resume from "./Resume";
 
 const TABS: FolderTab<"projects" | "resume">[] = [
   { id: "projects", label: "My projects" },
-  { id: "resume", label: "Resume", width: 238 },
+  { id: "resume", label: "Resume", width: 240 },
 ];
 
 export default function Projects({ onBack }: { onBack: () => void }) {

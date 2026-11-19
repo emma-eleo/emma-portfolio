@@ -3,7 +3,8 @@
 :root {
   --bg: #1c0909;
   --ink: #f1e8d6;
-  --font-script: "Carattere", "Dawning of a New Day", cursive;
+  --font-script: "Carattere", cursive;
+  --font-fancy: "Dawning of a New Day", cursive;
   --font-serif: "Gentium Book Basic", "Gentium Basic", Georgia, serif;
   --font-display: "Carattere", cursive;
   --font-hand: "Caveat", cursive;
@@ -105,9 +106,9 @@ body { font-family: var(--font-serif); -webkit-font-smoothing: antialiased; }
 .folder--dark .hob-folder { background: #2c2020; }
 .folder--dark .hob-body { background: #251c1c; scrollbar-color: #4a3b3b transparent; }
 
-.proj-grid { display: grid; grid-template-columns: repeat(auto-fill, calc(380 * var(--u))); gap: calc(20 * var(--u)); padding: 0 calc(16 * var(--u)); margin-top: calc(-33 * var(--u)); align-items: stretch; }
+.proj-grid { display: grid; grid-template-columns: repeat(auto-fill, calc(410 * var(--u))); gap: calc(35 * var(--u)); padding: 0 calc(35 * var(--u)); margin-top: calc(-33 * var(--u)); align-items: stretch; }
 .proj-card {
-  display: flex; flex-direction: column; box-sizing: border-box; min-height: calc(285 * var(--u));
+  display: flex; flex-direction: column; box-sizing: border-box; min-height: calc(290 * var(--u));
   border: 1px solid #4d4141; border-radius: calc(16 * var(--u)); padding: calc(22 * var(--u)) calc(22 * var(--u)) calc(20 * var(--u));
   font-family: var(--font-serif);
 }
@@ -157,7 +158,7 @@ a.resume-btn:hover, a.resume-btn:focus-visible { background: #3f2f2f; border-col
   margin-left: calc(-1 * var(--cx) * var(--u)); margin-top: calc(-1 * var(--cy) * var(--u));
   transition: transform .7s cubic-bezier(.4, 0, .2, 1);
 }
-.about-text { position: absolute; font-family: "Dawning of a New Day", "Caveat", cursive; color: #3a2f2a; font-size: calc(23 * var(--u)); line-height: calc(28.45 * var(--u)); }
+.about-text { position: absolute; font-family: "Caveat", cursive; color: #3a2f2a; font-size: calc(23 * var(--u)); line-height: calc(28.45 * var(--u)); }
 .about-text p { margin: 0; }
 .about-turn { display: none; }
 @media (max-width: 900px), (max-aspect-ratio: 1/1) {
@@ -165,7 +166,7 @@ a.resume-btn:hover, a.resume-btn:focus-visible { background: #3f2f2f; border-col
   .about-root { --u: min(calc(94vw / 500), calc(86dvh / 740)); }
   .about-root[data-page="0"] .about-frame { transform: translateX(calc(232 * var(--u))); }
   .about-root[data-page="1"] .about-frame { transform: translateX(calc(-232 * var(--u))); }
-  .about-turn { display: flex; align-items: center; gap: 22px; position: absolute; left: 0; right: 0; bottom: max(18px, env(safe-area-inset-bottom)); justify-content: center; color: rgba(241,232,214,.7); font: 400 20px var(--font-script); }
+  .about-turn { display: flex; align-items: center; gap: 22px; position: absolute; left: 0; right: 0; bottom: max(18px, env(safe-area-inset-bottom)); justify-content: center; color: rgba(241,232,214,.7); font: 400 20px var(--font-hand); }
   .about-turn button { width: 48px; height: 48px; border-radius: 999px; border: 1px solid #5a4343; background: transparent; color: #e2d8cf; font-size: 26px; line-height: 1; cursor: pointer; }
   .about-turn button:disabled { opacity: .3; cursor: default; }
 }

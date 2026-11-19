@@ -48,7 +48,8 @@ export const PROJECTS: Project[] = [
     name: "SAT Seat Tracker",
     period: "Oct-Nov 2026",
     description:
-      "A Python-based automation tool that monitors SAT test-center availability and sends real-time Telegram alerts when seats open.",
-    action: { label: "View GitHub", href: "https://github.com/emma-eleo/sat-seat-tracker" },
+      "A Python automation tool that monitors SAT test-center availability and sends near-real-time Telegram or Discord alerts when seats open.",
+    technologies: ["Python", "Playwright", "Telegram Bot API", "Discord webhooks", "PyYAML", "python-dotenv"],
+    action: { type: "github", label: "View GitHub", href: "https://github.com/emma-eleo/sat-seat-tracker" },
   },
 ];

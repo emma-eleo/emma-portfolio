@@ -5,8 +5,8 @@ import CookingGallery from "./CookingGallery";
 import Folder, { type FolderTab } from "./Folder";
 
 const TABS: FolderTab<"arts" | "cooking">[] = [
-  { id: "arts", label: "My favorite arts" },
-  { id: "cooking", label: "Cooking/Baking" },
+  { id: "arts", label: "Visual Arts" },
+  { id: "cooking", label: "Culinary Arts" },
 ];
 
 export default function Hobbies({ onBack }: { onBack: () => void }) {
