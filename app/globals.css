@@ -105,7 +105,7 @@ body { font-family: var(--font-serif); -webkit-font-smoothing: antialiased; }
 .folder--dark .hob-folder { background: #2c2020; }
 .folder--dark .hob-body { background: #251c1c; scrollbar-color: #4a3b3b transparent; }
 
-.proj-grid { display: grid; grid-template-columns: repeat(auto-fill, calc(410 * var(--u))); gap: calc(35 * var(--u)); padding: 0 calc(35 * var(--u)); margin-top: calc(-33 * var(--u)); align-items: stretch; }
+.proj-grid { display: grid; grid-template-columns: repeat(auto-fill, calc(410 * var(--u))); gap: calc(35.5 * var(--u)); padding: 0 calc(35 * var(--u)); margin-top: calc(-33 * var(--u)); align-items: stretch; }
 .proj-card {
   display: flex; flex-direction: column; box-sizing: border-box; min-height: calc(285 * var(--u));
   border: 1px solid #4d4141; border-radius: calc(16 * var(--u)); padding: calc(22 * var(--u)) calc(22 * var(--u)) calc(20 * var(--u));

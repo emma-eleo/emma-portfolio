@@ -679,7 +679,7 @@ body {
 .proj-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, calc(410 * var(--u)));
-  gap: calc(35 * var(--u));
+  gap: calc(35.5 * var(--u));
   padding: 0 calc(35 * var(--u));
   margin-top: calc(-33 * var(--u));
   align-items: stretch;

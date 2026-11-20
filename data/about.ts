@@ -1,7 +1,12 @@
+import { create } from "domain";
+
 /** The handwritten introduction. Each string is one paragraph; `left` is the left page, `right` the right page. */
 export const ABOUT_TEXT = {
-  left: ["Hey, I'm Emma!", "I'm a curious builder with a soft spot for technology, creativity, and turning ideas into something tangible."],
-  right: ["Beyond the screen, you'll probably find me painting, baking, or exploring a new creative hobby."],
+  left: ["Hey, I'm Emma!", "I'm a curious builder with a soft spot for technology, creativity, and turning ideas into something tangible.",
+    "I'm always eager to learn, expand my knowledge, and keep building until I can create things that make a meaningful impact and help shape the future of technology."
+  ],
+  right: ["Beyond the screen, you'll probably find me painting, baking, or exploring a new creative hobby.",
+    "I hope this portfolio has given you a little glimpse into who I am and the things I love to create."],
 };
 
 /**
